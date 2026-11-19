@@ -1,6 +1,7 @@
-import { chromium, devices } from 'playwright';
+import { chromium, webkit, devices } from 'playwright';
 
-const browser = await chromium.launch({ headless: true, channel: 'chrome' });
+const engine = process.env.BROWSER_ENGINE === 'webkit' ? webkit : chromium;
+const browser = await engine.launch(process.env.BROWSER_ENGINE === 'webkit' ? { headless: true } : { headless: true, channel: 'chrome' });
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:4190';
 let failed = false;
 for (const width of [320, 375, 390, 430, 768, 1440]) {

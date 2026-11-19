@@ -5,7 +5,7 @@
 - Centralizados título, chamada e descrição da seção de parceiros.
 - Validado em Playwright nas larguras 320, 375, 390, 430, 768 e 1440 px: alinhamento, ausência de overflow e carregamento da marca como SVG verdadeiro (`image/svg+xml`) com ícones vetoriais sem emoji.
 - Build padrão direcionado à exportação Next.js para a Vercel; arquivos de pesquisa e saídas geradas excluídos do repositório de publicação.
-- Safari/iPhone físico não disponível no ambiente; a validação móvel usou emulação de iPhone no Chromium.
+- A verificação também passou no WebKit com emulação de iPhone; teste em aparelho físico não disponível no ambiente.
 
 ## [1.4.0] — 2026-11-18 — storytelling e carrossel contínuo
 
