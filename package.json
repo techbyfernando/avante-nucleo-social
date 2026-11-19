@@ -1,0 +1,38 @@
+{
+  "name": "avante-nucleo-social",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "npm run build:next",
+    "build:static": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test:content": "node scripts/audit-content.mjs",
+    "test:performance": "node scripts/performance.mjs",
+    "test:reference": "node scripts/validate-reference.mjs",
+    "test": "node scripts/audit.mjs",
+    "dev:next": "next dev",
+    "build:next": "node scripts/prepare-next-assets.mjs && next build",
+    "preview:next": "npx serve out"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "cheerio": "^1.2.0",
+    "esbuild": "^0.28.2",
+    "lighthouse": "^13.6.0",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.65.1",
+    "pngjs": "^7.0.0",
+    "rea-agents": "^6.7.0",
+    "sharp": "^0.35.5"
+  },
+  "dependencies": {
+    "gsap": "^3.15.1",
+    "html-react-parser": "^6.1.10",
+    "lenis": "^1.3.27",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

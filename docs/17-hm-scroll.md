@@ -1,0 +1,9 @@
+# Evidência da referência HM Consultoria
+
+Fonte pública: `https://hm-consultoria.vercel.app/`. O HTML e o bundle JS/CSS foram capturados em `research/hm-original.html`, `research/hm-app.js` e `research/hm-app.css`. A inspeção REA local usou `rea-agents` no Chrome controlado: alvo `FADF8B7DFA025A0B4A3F478C87FC894D`; listagem `ev_90c51580459f185ed5ab955831d53844629147a133b938fff4fae5495cbf1a9f`; screenshot `ev_9c9328758126578edf70393bfe10b73bdd4ffe951caf8cba74b988347d0bde9c`. A captura completa `analyze-web-bundle` excedeu 4 GiB e encerrou com falta de memória; não foi tratada como evidência concluída.
+
+O bundle público contém o texto “Risco sem evidência deixa decisões no escuro...” e o componente da revelação. Ele divide o texto com SplitText em `words,chars`, mantém o parágrafo dentro de um bloco `sticky top-0` com altura de viewport e anima caracteres com `stagger: .04`, `duration: .4`, `ease: power2.inOut`. O ScrollTrigger está configurado com `start: "top 40%"`, `end: "bottom bottom"` e `scrub: .25`. As classes alteram cor do tom claro inicial para a cor final, com passagem pela cor de destaque. Há caminho de `prefers-reduced-motion` que mostra o texto completo.
+
+Na Avante, a reprodução preserva a mecânica observada: texto preso à viewport, caracteres separados, progressão vinculada diretamente ao scroll com os mesmos valores de início/fim, scrub, stagger e duração. A cor institucional e a opacidade substituem a paleta azul da HM. O conteúdo permanece legível sem JavaScript. Esta é uma reconstrução comportamental; não reproduz a marca nem o texto da referência.
+
+O guia `rea-tool-design` orientou separar a evidência da captura REA da leitura estática do bundle e da validação de execução local. `rea-changelog-update` é uma skill de release do projeto REA; este site não tem release PR/tags REA. Seu princípio de registro com proveniência foi aplicado no `CHANGELOG.md` local sem inventar metadados de contribuição.
