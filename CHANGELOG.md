@@ -1,5 +1,12 @@
 # Registro de alterações — Avante Núcleo Social
 
+## [1.4.1] — 2026-11-18 — alinhamento dos parceiros e preparação de publicação
+
+- Centralizados título, chamada e descrição da seção de parceiros.
+- Validado em Playwright nas larguras 320, 375, 390, 430, 768 e 1440 px: alinhamento, ausência de overflow e carregamento da marca como SVG verdadeiro (`image/svg+xml`) com ícones vetoriais sem emoji.
+- Build padrão direcionado à exportação Next.js para a Vercel; arquivos de pesquisa e saídas geradas excluídos do repositório de publicação.
+- Safari/iPhone físico não disponível no ambiente; a validação móvel usou emulação de iPhone no Chromium.
+
 ## [1.4.0] — 2026-11-18 — storytelling e carrossel contínuo
 
 - Substituída a fotografia de treinamento indicada por nova cena ilustrativa sem rostos em destaque, com AVIF/WebP responsivos. O mestre 3840 × 2160 é ampliação de original 1672 × 941, sem detalhe 4K nativo.
